@@ -1,0 +1,77 @@
+#food-item {
+	padding-bottom: 30px;
+}
+
+#food-item .card {
+	color: black;
+}
+
+#food-item img {
+	border-radius: 10px;
+}
+
+#food-item .title {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#food-item .subtitle {
+	font-size: 14px;
+}
+
+#food-item select {
+	font-size: 10px;
+	height: 28px;
+	padding: 0;
+	border: 1px solid #a9a9a93d;
+}
+
+#food-item button {
+	font-size: 10px;
+}
+
+#food-item .bordered {
+   border: 1px solid var(--primary-color)!important;
+}
+
+#camera {
+	visibility: hidden;
+}
+
+#camera, #camera--view, #camera--sensor, #camera--output{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    z-index: 3;
+}
+
+#camera--view, #camera--sensor, #camera--output{
+   /* transform: scaleX(-1);
+    filter: FlipH;*/
+}
+
+#camera--trigger{
+		z-index: 4;
+    width: 200px;
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 100px);
+}
+
+.taken {
+		position: absolute;
+    height: 100px!important;
+    width: 100px!important;
+    transition: all 0.5s ease-in;
+    border: solid 3px white;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 4;
+}

@@ -1,0 +1,77 @@
+<div class="bg bg-primary position-relative">
+	<div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+	<div class="home">
+		<div class="wrapper p-3">
+			<div class="home-head">
+				<div class="header d-flex justify-content-between align-items-center mb-3">
+					<div class="greeting mt-3">
+						<h5 class="font-weight-bold" id="name">Add Food</h5>
+					</div>
+				</div>
+				<div class="d-flex align-items-center mb-3">
+					<div class="form-group w-100 mb-0 mr-2">
+						<label class="leading-icon">
+							<i class="fa fa-search"></i>
+						</label>
+						<input class="form-control pl-5" id="search" placeholder="Find Food">
+					</div>
+					<button class="btn btn-primary px-3" data-toggle="modal" data-target="#choose-type"><i class="fa fa-camera"></i></button>
+				</div>
+			</div>
+		</div>
+		<div class="home-body bg-white py-4">
+			<div class="bottom-navbar d-flex justify-content-around align-items-center shadowed">
+				<div class="bottom-navbar-item text-center" data="home">
+					<i class="fa fa-home"></i>
+				</div>
+				<div class="bottom-navbar-item" data="add">
+					<div class="bg-primary px-4 py-2">
+						<i class="fa fa-search"></i>
+					</div>
+				</div>
+				<div class="bottom-navbar-item text-center" data="chart">
+					<i class="fa fa-bar-chart"></i>
+				</div>
+			</div>
+			<div class="food-items p-0">
+				<div class="row p-0 pb-5 m-0" id="food-item">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="camera">
+  <canvas id="camera--sensor"></canvas>
+  <video id="camera--view" autoplay playsinline></video>
+  <img src="//:0" alt="" id="camera--output">
+  <button class="btn btn-primary" id="camera--trigger">Take picture</button>
+</div>
+
+<div class="modal fade" id="choose-type" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Type Identification</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <button class="btn btn-primary btn-block my-3 auto-ident" data-dismiss="modal">Auto Identification</button>
+        <button class="btn btn-dark btn-block mb-4 manual-ident" data-dismiss="modal">Manual Identification</button>
+      </div>
+    </div>
+  </div>
+</div>
