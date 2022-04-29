@@ -1,0 +1,271 @@
+@import url('../fonts/fonts.css');
+@import url('color-scheme.css');
+@import url('assesment.css');
+@import url('login.css');
+@import url('register.css');
+@import url('assesment-result.css');
+@import url('home.css');
+@import url('add.css');
+
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: "Rubik", sans-serif;
+	/*background-color: var(--primary-color);*/
+}
+
+.cursor-pointer {
+  cursor: pointer!important;
+}
+
+.form-control {
+	border-radius: 15px;
+	border: none;
+	padding: 12px;
+}
+
+.form-control:focus,.form-control:active {
+	border: none;
+}
+
+.btn {
+	padding: 12px;
+	border-radius: 15px;
+	border: none;
+}
+
+.btn-primary {
+	color: white;
+	background-color: var(--primary-color-dark);
+}
+
+.btn-primary-o {
+  color: black;
+  background-color: white;
+  border: 1px solid var(--primary-color);
+}
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+	background-color: #5e4ef5!important;
+	outline: none;
+	box-shadow: unset!important;
+}
+
+
+.btn-white {
+	color: var(--primary-color-dark);
+	background-color: white;
+}
+
+.card {
+	border-radius: 15px;
+	border:  none;
+}
+
+.bg {
+	min-height: 100vh;
+}
+
+a, a:hover {
+	color: var(--primary-color);
+}
+
+#loader {
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	position: fixed;
+	z-index: 9;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+}
+
+.changed-wrapper {
+	transition: 0.3s ease-out;
+}
+
+.bubbles{
+  position:absolute;
+  width:100%;
+  height: 100%;
+  z-index:0;
+  overflow:hidden;
+  top:0;
+  left:0;
+}
+.bubble{
+  position: absolute;
+  bottom:-100px;
+  width:40px;
+  height: 40px;
+  background:#f1f1f1;
+  border-radius:50%;
+  opacity:0.5;
+  animation: rise 10s infinite ease-in;
+}
+.bubble:nth-child(1){
+  width:40px;
+  height:40px;
+  left:10%;
+  animation-duration:8s;
+}
+.bubble:nth-child(2){
+  width:20px;
+  height:20px;
+  left:20%;
+  animation-duration:5s;
+  animation-delay:1s;
+}
+.bubble:nth-child(3){
+  width:50px;
+  height:50px;
+  left:35%;
+  animation-duration:7s;
+  animation-delay:2s;
+}
+.bubble:nth-child(4){
+  width:80px;
+  height:80px;
+  left:50%;
+  animation-duration:11s;
+  animation-delay:0s;
+}
+.bubble:nth-child(5){
+  width:35px;
+  height:35px;
+  left:55%;
+  animation-duration:6s;
+  animation-delay:1s;
+}
+.bubble:nth-child(6){
+  width:45px;
+  height:45px;
+  left:65%;
+  animation-duration:8s;
+  animation-delay:3s;
+}
+.bubble:nth-child(7){
+  width:90px;
+  height:90px;
+  left:70%;
+  animation-duration:12s;
+  animation-delay:2s;
+}
+.bubble:nth-child(8){
+  width:25px;
+  height:25px;
+  left:80%;
+  animation-duration:6s;
+  animation-delay:2s;
+}
+.bubble:nth-child(9){
+  width:15px;
+  height:15px;
+  left:70%;
+  animation-duration:5s;
+  animation-delay:1s;
+}
+.bubble:nth-child(10){
+  width:90px;
+  height:90px;
+  left:25%;
+  animation-duration:10s;
+  animation-delay:4s;
+}
+
+@keyframes rise{
+  0%{
+    bottom:-100px;
+    transform:translateX(0);
+  }
+  50%{
+    transform:translate(100px);
+  }
+  100%{
+    bottom:1080px;
+    transform:translateX(-200px);
+  }
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--primary-color-dark);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+.chart {
+  min-height: calc(100vh - 300px);
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+	.wrapper {
+		max-width: 500px;
+		margin: auto;
+	}
+}
